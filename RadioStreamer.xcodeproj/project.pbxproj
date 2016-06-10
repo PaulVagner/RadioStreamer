@@ -14,6 +14,7 @@
 		448AE2FA1D0A6F500035E798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448AE2F81D0A6F500035E798 /* LaunchScreen.storyboard */; };
 		448AE3051D0A6F500035E798 /* RadioStreamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448AE3041D0A6F500035E798 /* RadioStreamerTests.swift */; };
 		448AE3101D0A6F500035E798 /* RadioStreamerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448AE30F1D0A6F500035E798 /* RadioStreamerUITests.swift */; };
+		448AE3221D0A73090035E798 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448AE3211D0A73090035E798 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		448AE30B1D0A6F500035E798 /* RadioStreamerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioStreamerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		448AE30F1D0A6F500035E798 /* RadioStreamerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStreamerUITests.swift; sourceTree = "<group>"; };
 		448AE3111D0A6F500035E798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448AE3211D0A73090035E798 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		448AE2EE1D0A6F500035E798 /* RadioStreamer */ = {
 			isa = PBXGroup;
 			children = (
-				448AE2EF1D0A6F500035E798 /* AppDelegate.swift */,
-				448AE2F11D0A6F500035E798 /* ViewController.swift */,
-				448AE2F31D0A6F500035E798 /* Main.storyboard */,
-				448AE2F61D0A6F500035E798 /* Assets.xcassets */,
-				448AE2F81D0A6F500035E798 /* LaunchScreen.storyboard */,
-				448AE2FB1D0A6F500035E798 /* Info.plist */,
+				448AE31F1D0A72B70035E798 /* Model */,
+				448AE31D1D0A72720035E798 /* Controller */,
+				448AE31E1D0A72860035E798 /* View */,
+				448AE3201D0A72D30035E798 /* Supporting Files */,
 			);
 			path = RadioStreamer;
 			sourceTree = "<group>";
@@ -123,6 +123,41 @@
 				448AE3111D0A6F500035E798 /* Info.plist */,
 			);
 			path = RadioStreamerUITests;
+			sourceTree = "<group>";
+		};
+		448AE31D1D0A72720035E798 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				448AE2F11D0A6F500035E798 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		448AE31E1D0A72860035E798 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				448AE2F31D0A6F500035E798 /* Main.storyboard */,
+				448AE2F81D0A6F500035E798 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		448AE31F1D0A72B70035E798 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				448AE3211D0A73090035E798 /* APIManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		448AE3201D0A72D30035E798 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				448AE2EF1D0A6F500035E798 /* AppDelegate.swift */,
+				448AE2F61D0A6F500035E798 /* Assets.xcassets */,
+				448AE2FB1D0A6F500035E798 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +228,7 @@
 				TargetAttributes = {
 					448AE2EB1D0A6F500035E798 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HVSGYG26E4;
 					};
 					448AE2FF1D0A6F500035E798 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448AE3221D0A73090035E798 /* APIManager.swift in Sources */,
 				448AE2F21D0A6F500035E798 /* ViewController.swift in Sources */,
 				448AE2F01D0A6F500035E798 /* AppDelegate.swift in Sources */,
 			);
@@ -401,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RadioStreamer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulvagner.RadioStreamer;
@@ -412,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RadioStreamer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulvagner.RadioStreamer;
